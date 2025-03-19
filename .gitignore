@@ -1,0 +1,73 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+rl_venv/
+rl_env/
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Log files
+*.log
+logs/
+log/
+
+# Model files and large binary data
+models/*.pt
+models/*.pth
+models/*.h5
+models/*.ckpt
+models/*.bin
+models/checkpoints/
+output/
+
+# Web related
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Environments
+.env
+.venv
+env/
+
+# OS specific
+.DS_Store
+Thumbs.db 

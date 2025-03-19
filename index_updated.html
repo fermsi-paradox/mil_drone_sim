@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Military Drone Swarm Simulation (Updated)</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <div id="info">
+        <h1>Drone Swarm Simulation</h1>
+        <div class="controls">
+            <div class="button-container">
+                <button id="start-btn" class="control-btn">START</button>
+                <button id="pause-btn" class="control-btn" disabled>PAUSE</button>
+                <button id="reset-btn" class="control-btn">RESET</button>
+            </div>
+            
+            <div class="slider-container">
+                <label for="map-size">Map Size: <span id="map-size-value">20</span></label>
+                <input type="range" id="map-size" min="10" max="50" value="20">
+            </div>
+            
+            <div class="slider-container">
+                <label for="drone-count">Drone Count: <span id="drone-count-value">20</span></label>
+                <input type="range" id="drone-count" min="5" max="50" value="20">
+            </div>
+            
+            <div class="slider-container">
+                <label for="enemy-count">Enemy Count: <span id="enemy-count-value">10</span></label>
+                <input type="range" id="enemy-count" min="0" max="30" value="10">
+            </div>
+            
+            <div class="slider-container">
+                <label for="drone-altitude">Drone Altitude: <span id="drone-altitude-value">3</span></label>
+                <input type="range" id="drone-altitude" min="1" max="10" step="0.5" value="3">
+            </div>
+            
+            <div class="slider-container">
+                <label for="detection-range">Detection Range: <span id="detection-range-value">5</span></label>
+                <input type="range" id="detection-range" min="2" max="15" step="0.5" value="5">
+            </div>
+            
+            <div class="slider-container">
+                <label for="cohesion-weight">Enemy Attraction: <span id="cohesion-value">1.0</span></label>
+                <input type="range" id="cohesion-weight" min="0" max="2" step="0.1" value="1.0">
+            </div>
+            
+            <div class="slider-container">
+                <label for="separation-weight">Separation: <span id="separation-value">1.5</span></label>
+                <input type="range" id="separation-weight" min="0" max="10" step="0.1" value="1.5">
+            </div>
+            
+            <div class="slider-container">
+                <label for="avoidance-weight">Obstacle Avoidance: <span id="avoidance-value">2.0</span></label>
+                <input type="range" id="avoidance-weight" min="0" max="5" step="0.1" value="2.0">
+            </div>
+            
+            <div class="slider-container">
+                <label for="search-aggressiveness">Search Aggressiveness: <span id="search-aggressiveness-value">0.7</span></label>
+                <input type="range" id="search-aggressiveness" min="0.1" max="2.0" step="0.1" value="0.7">
+            </div>
+            
+            <div class="slider-container">
+                <label for="collision-damage">Collision Damage: <span id="collision-damage-value">30</span></label>
+                <input type="range" id="collision-damage" min="0" max="100" step="5" value="30">
+            </div>
+            
+            <div class="toggle-container">
+                <label for="enemy-shooting">Enemy Shooting:</label>
+                <input type="checkbox" id="enemy-shooting" checked>
+            </div>
+            
+            <!-- Reconnaissance mode checkbox has been removed: it's always enabled -->
+        </div>
+    </div>
+    <div id="simulation-container"></div>
+
+    <!-- Import Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- Main simulation script with cache busting -->
+    <script src="js/main.js?v=2"></script>
+</body>
+</html> 
